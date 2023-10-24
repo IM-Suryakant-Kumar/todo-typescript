@@ -1,8 +1,10 @@
 import express, { Express } from "express";
+import { config } from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import todoRoutes from "./routes";
 
+config();
 const app: Express = express();
 
 const PORT: string | number = process.env.PORT || 4000;
